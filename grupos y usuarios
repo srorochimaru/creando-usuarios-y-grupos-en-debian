@@ -1,0 +1,11 @@
+Primero lo que haremos sera crear un grupo el cual se llamara casa, en ese grupo agregaremos a los usuarios, en mi caso sera el nombre de mi madre y el mio.
+groupadd casa...   useradd Carina... useradd David
+luego de agregar a los usuiarios y a l grupo, vamos a agregar a los usuarios al grupo, entonces escribimos.
+adduser Carina casa...   adduser David... y listo, esos usuairos estaran agregados
+ahora tenemos que encargarnos de revisar si esos usuarios estan agregados al gripo que creamos, asi que tenemos que escribir "cat /etc/group"
+ahora vamos a cambiarle el nombre al grupo
+Ahora vamos a escribir group mod, con esto nos mostrara un pequeño menu en el cual vamos a poder ver que comandos podemos utilizar para hacer
+ok en mi caso utilice el comando
+groupmod -g 1024 -n familia casa
+luego de eso volveros a revizar en nano /etc/group
+y listo ahi nos aparece el nombre del grupo con el nombre de los usuarios asi terminamos.
